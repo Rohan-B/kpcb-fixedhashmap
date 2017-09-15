@@ -59,6 +59,7 @@ public class Testing {
         case "test":
           runAllTests();
           System.out.println("Ran all tests");
+          break;
         default:
           System.out.println(
           "List of commands: \n" +
