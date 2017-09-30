@@ -3,10 +3,13 @@ import java.util.Scanner;
 public class Testing {
 
   public static void main(String[] args) {
+    //initialize a default hashmap of size 100
     FixedHashMap<String> fixedMap = new FixedHashMap<>(100);
+    //initialize a scanner to get user input
     Scanner scan = new Scanner(System.in);
     String input = "";
 
+    //The below while loop handles user input for the hashmap
     System.out.println("Initialized a default fixedhashmap with size 100");
     while(input != "e") {
       System.out.print("\nPlease enter what command you would like to do (enter `h` for more info): ");
@@ -73,11 +76,16 @@ public class Testing {
       }
     }
 
+    //close the scanner
+    scan.close();
+
   }
 
 
   /* Testing Functions */
   public static void runAllTests() {
+    //a few sample tests written to test the FixedHashMap
+    //it might be easier to use the commands above to test ^
     testInsertFailure();
     testInsertOverwrite();
     testStress();
