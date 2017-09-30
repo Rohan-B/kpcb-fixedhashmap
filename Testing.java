@@ -11,7 +11,7 @@ public class Testing {
 
     //The below while loop handles user input for the hashmap
     System.out.println("Initialized a default fixedhashmap with size 100");
-    while(input != "e") {
+    while(input != "exit") {
       System.out.print("\nPlease enter what command you would like to do (enter `h` for more info): ");
       input = scan.next();
       String key = "";
@@ -63,6 +63,8 @@ public class Testing {
           runAllTests();
           System.out.println("Ran all tests");
           break;
+        case "exit":
+          return;
         default:
           System.out.println(
           "List of commands: \n" +
@@ -72,7 +74,8 @@ public class Testing {
           "delete: delete an element from the hashmap \n" +
           "load: get the current load of the hashmap \n" +
           "new: creates a new hashmap (String keys and values) \n" +
-          "test: runs the test functions \n");
+          "test: runs the test functions \n" +
+          "exit: quits the program \n");
       }
     }
 
